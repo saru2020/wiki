@@ -11,7 +11,7 @@ class WikiSidebar(Document):
 
 	def before_save(self):
 
-		details = frappe.db.get_values('Wiki Sidebar',
+		details = frappe.db.get_all('Wiki Sidebar',
 			filters={'name':self.name },
 			fieldname=['title'], pluck='title')
 
